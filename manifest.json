@@ -1,0 +1,8 @@
+{
+  "domain": "rce_price_sensor",
+  "name": "RCE Price Sensor",
+  "version": "1.0",
+  "requirements": ["requests"],
+  "dependencies": [],
+  "codeowners": ["@twojanazwa"]
+}
