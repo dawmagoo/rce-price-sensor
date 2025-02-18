@@ -1,0 +1,7 @@
+{
+  "name": "RCE Price Sensor",
+  "integration": true,
+  "homeassistant": "2023.0.0",
+  "category": "sensor",
+  "codeowners": ["@dawmagoo"]
+}
