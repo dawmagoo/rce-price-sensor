@@ -1,8 +1,10 @@
 {
   "domain": "rce_price_sensor",
   "name": "RCE Price Sensor",
+  "version": "1.0.0",
   "documentation": "https://github.com/dawmagoo/rce-price-sensor",
   "dependencies": [],
   "codeowners": ["@dawmagoo"],
-  "requirements": ["requests"]
+  "requirements": ["requests"],
+  "iot_class": "cloud_polling"
 }
