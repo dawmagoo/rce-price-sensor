@@ -1,12 +1,9 @@
-from __future__ import annotations
-import csv
+from homeassistant.components.sensor import SensorEntity
+from homeassistant.core import HomeAssistant
+from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 import requests
 import logging
-from homeassistant.components.sensor import SensorEntity
-from homeassistant.core import HomeAssistant
-from homeassistant.helpers.entity_platform import AddEntitiesCallback
-from datetime import datetime, timedelta, timezone
 
 SCAN_INTERVAL = timedelta(seconds=20)
 _LOGGER = logging.getLogger(__name__)
@@ -25,7 +22,7 @@ class RCEPriceSensor(SensorEntity):
         self.cr_time = None
         self.last_update = None
         self.cloud_response = None
-        self.last_network_pull = datetime(year=2000, month=1, day=1, tzinfo=timezone.utc)
+        self.last_network_pull = datetime(year=2000, month=1, day=1, tzinfo=ZoneInfo("UTC"))
         self._attr_unique_id = "rce_price_sensor"
         self._attr_name = "RCE Price Sensor"
         self._attr_state = None
@@ -109,7 +106,7 @@ class RCEPriceSensor(SensorEntity):
         now = now.replace(minute=0).replace(second=0) + timedelta(days=1)
         self.json_to_events(self.cloud_response.json(), now)
 
-        # Example: Set the state to the current price
+        # Set the state to the current price
         if self.ev:
             self._attr_state = self.ev[0]['price']  # Set current price as state
 
