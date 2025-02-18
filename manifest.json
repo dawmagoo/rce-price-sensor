@@ -1,0 +1,9 @@
+{
+  "domain": "rce_price_sensor",
+  "name": "RCE Price Sensor",
+  "documentation": "https://github.com/dawmagoo/rce-price-sensor",
+  "dependencies": [],
+  "codeowners": ["@dawmagoo"],
+  "requirements": ["requests"],
+  "version": "1.0.1"
+}
