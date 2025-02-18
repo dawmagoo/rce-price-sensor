@@ -15,6 +15,7 @@ async def async_setup_platform(
     config: ConfigType,
     async_add_entities: AddEntitiesCallback,
     discovery_info: DiscoveryInfoType | None = None,
+) -> None:
     """Set up the RCE Price Sensor platform."""
     async_add_entities([RCEPriceSensor()])
 
