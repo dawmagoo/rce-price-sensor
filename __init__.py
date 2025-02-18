@@ -1,2 +1,0 @@
-
-"""RCE Price Sensor Integration."""
